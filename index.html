@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Conversor de Cores</title>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Conversor de Cores</h2>
+
+        <div class="rgbInput" id="rgbInput">
+            <label for="redInput">Red:</label>
+            <input type="number" id="redInput" min="0" max="255" placeholder="0">
+            
+            <label for="greenInput">Green:</label>
+            <input type="number" id="greenInput" min="0" max="255" placeholder="0">
+            
+            <label for="blueInput">Blue:</label>
+            <input type="number" id="blueInput" min="0" max="255" placeholder="0">
+        </div>
+        
+        <div class="cmykInput" id="cmykInput">
+            <label for="cyanInput">Cyan:</label>
+            <input type="number" id="cyanInput" min="0" max="100" placeholder="0">
+            
+            <label for="magentaInput">Magenta:</label>
+            <input type="number" id="magentaInput" min="0" max="100" placeholder="0">
+            
+            <label for="yellowInput">Yellow:</label>
+            <input type="number" id="yellowInput" min="0" max="100" placeholder="0">
+            
+            <label for="blackInput">Black:</label>
+            <input type="number" id="blackInput" min="0" max="100" placeholder="0">
+        </div>
+        
+        <div class="hsvInput" id="hsvInput">
+            <label for="hueInput">Hue:</label>
+            <input type="number" id="hueInput" min="0" max="359" placeholder="0">
+            
+            <label for="saturacaoInput">Saturação:</label>
+            <input type="number" id="saturacaoInput" min="0" max="100" placeholder="0">
+            
+            <label for="valueInput">Value:</label>
+            <input type="number" id="valueInput" min="0" max="100" placeholder="0">
+        </div>
+
+        <div class="menuDropDown">
+            <label for="selecionarOperacao">Selecionar Operação:</label>
+            <select id="selecionarOperacao" onchange="atualizarCampos()">
+                <option value="normalizar">Normalizar RGB</option>
+                <option value="rgbHSV">RGB para HSV</option>
+                <option value="hsvRGB">HSV para RGB</option>
+                <option value="rgbCMYK">RGB para CMYK</option>
+                <option value="cmykRGB">CMYK para RGB</option>
+                <option value="rgbCinza">RGB para Escala de Cinza</option>
+            </select>
+        </div>
+
+        <button id="converterButton">Converter</button>
+
+        <br>
+
+        <div id="resultado"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
