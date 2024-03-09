@@ -120,11 +120,22 @@ function atualizarCampos(operacao) {
 
 
 
+// RESETA O RESULTADO PARA VAZIO
+function resetarResultado() {
+    document.getElementById('resultado').innerText = '';
+}
+
+
+
+
 // Adiciona um ouvinte de evento para alterar os rótulos quando a operação é selecionada
 document.getElementById('selecionarOperacao').addEventListener('change', function () {
     var operacaoSelecionada = this.value;
+    resetarInputs();
+    resetarResultado();
     atualizarCampos(operacaoSelecionada);
 });
+
 
 
 
